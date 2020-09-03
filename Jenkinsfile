@@ -14,7 +14,7 @@ pipeline {
     // environment now its good to plan for the future.
     //string(name: 'DEPLOY_ENV', default: 'dev', description: 'Deploy to this environment')
   }
-
+  stages {
    stage('Deploy') {
      steps {
        // Ansible example
@@ -26,4 +26,5 @@ pipeline {
          """
       }
     }
+}
 }

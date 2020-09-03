@@ -31,6 +31,9 @@ pipeline {
          python --version
          python hw.py
          pip install kubernetes
+         df -h
+         ls -ll /var/jenkins_home
+         cat /var/jenkins_home/kube/config
          """
       }
     }

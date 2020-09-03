@@ -4,11 +4,11 @@ pipeline {
   parameters {
     // Select the application or service you want updated. Even if you only have a single 
     // application or service now its good to plan for the future.
-    string(name: 'devhyscaleclusters', default: 'dev-gke,dev-eks,dev-kops,dev-aks', description: 'Deploy this application or service')
+    string(name: 'devhyscaleclusters', defaultValue: 'dev-gke,dev-eks,dev-kops,dev-aks', description: 'Deploy this application or service')
 
     // Select the version you want deployed. This could be a semantic version or a 
     // git reference like a tag, branch, or SHA.
-    string(name: 'blacklisted_ns', default: 'default,dev,devgrp1,devgrp2,ingress,monitoring,test,kube-node-lease,kube-public,kube-system,plhys', description: 'Deploy this version of the application or service')
+    string(name: 'blacklisted_ns', defaultValue: 'default,dev,devgrp1,devgrp2,ingress,monitoring,test,kube-node-lease,kube-public,kube-system,plhys', description: 'Deploy this version of the application or service')
 
     // Select the environment you want updated. Even if you only have a single 
     // environment now its good to plan for the future.

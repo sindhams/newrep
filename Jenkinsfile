@@ -22,7 +22,7 @@ pipeline {
        // - need to store SSH key in Jenkins that can be used for deployments
        //withCredentials([sshUserPrivateKey(credentialsId: "deploy-ssh-key", keyFileVariable: 'deploy.pem')]) {
          sh """
-         /usr/bin/python --version
+         python --version
          """
       }
     }

@@ -23,6 +23,7 @@ pipeline {
        //withCredentials([sshUserPrivateKey(credentialsId: "deploy-ssh-key", keyFileVariable: 'deploy.pem')]) {
          sh """
          python --version
+         python hw.py
          """
       }
     }

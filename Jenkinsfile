@@ -33,6 +33,8 @@ pipeline {
          pip install kubernetes
          df -h
          ls -ll /var/jenkins_home
+         mkdir -p ~/.kube/
+         cp /var/jenkins_home/.kube/config ~/.kube/config
          curl -LO "https://storage.googleapis.com/kubernetes-release/release/\$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
          chmod +x ./kubectl
          ./kubectl config get-contexts

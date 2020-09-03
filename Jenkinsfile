@@ -24,7 +24,6 @@ pipeline {
          sh """
          python --version
          """
-        }
       }
     }
 }

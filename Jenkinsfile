@@ -34,6 +34,11 @@ pipeline {
          df -h
          ls -ll /var/jenkins_home
          cat /var/jenkins_home/kube/config
+         curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+         chmod +x ./kubectl
+         sudo mv ./kubectl /usr/local/bin/kubectl
+         kubectl config get-contexts
+         kubectl get ns
          """
       }
     }

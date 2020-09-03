@@ -24,6 +24,7 @@ pipeline {
          sh """
          python --version
          python hw.py
+         pip install kubernetes
          """
       }
     }

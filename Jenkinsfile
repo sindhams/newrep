@@ -1,6 +1,6 @@
 pipeline {
   
-  agent any
+  agent { docker { image 'python:3.5.1' } }
   parameters {
     // Select the application or service you want updated. Even if you only have a single 
     // application or service now its good to plan for the future.
